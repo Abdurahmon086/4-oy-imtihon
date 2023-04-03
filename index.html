@@ -5,12 +5,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>BookShelter</title>
 </head>
 
 <body>
+    <header>
+        <div class="head container-full">
+            <div class="head__wrapper">
+                <a href="/" class="head__link">
+                    <img src="./images/logo.svg" alt="BookShelter">
+                </a>
+                <div class="head__inner container">
+                    <form action="#" class="head__form form">
+                        <div class="form__inner">
+                            <input type="search" name="search" placeholder="Search books" class="form__search">
+                        </div>
+                    </form>
 
+                    <div class="head__right">
+                        <img src="./images/sun.svg" alt="sun icon">
+                        <button class="head__btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="show-out">
+            <div class="show container-full">
+                <div class="show__wrapper container">
+                    <span class="show__text">Showing 18 Result(s)</span>
+
+                    <select name="order" class="show__select">
+                        <option value="1">Order by newest</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="books container-full">
+            <section class="bookmark">
+                <div class="bookmark__wrapper">
+                    <h3 class="bookmark__title">Bookmarks</h3>
+                    <p class="bookmark__text">If you don’t like to read, you haven’t found the right book</p>
+                    <ul class="bookmark__inner">
+
+                    </ul>
+                </div>
+            </section>
+            <section class="store">
+                <div class="store__wrapper container">
+                    <ul class="store__inner">
+
+                    </ul>
+                    <ul class="store__page page">
+                        <li class="page__item">
+                            <p class="page__slide">
+                                < </p>
+                        </li>
+                        <div class="page__number">
+
+                        </div>
+                        <li class="page__item">
+                            <p class="page__slide">></p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <section class="more-info none">
+
+        </section>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
