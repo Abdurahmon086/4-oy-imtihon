@@ -3,9 +3,26 @@ import { bookmark } from './bookmarkElement.js';
 import { moreInfo } from './infoElement.js';
 import { pagination } from './paginationElement.js';
 
-let KEY = 'AIzaSyDK9tDAoyrtOfq8dB0DSM5QFDb3_6VIGbg'
+
+let KEY = 'AIzaSyCWw7P-Dwlm4DSkbgEhax8IiQh6TSHnUI0'
 export let elCard = document.querySelector('.store__inner');
 let elSearch = document.querySelector('.form__search');
+const token = localStorage.getItem('token');
+
+
+const logoutBtn = document.querySelector('.head__btn');
+if (!token) {
+    window.location.href = './login.html';
+}
+
+if (token) {
+    logoutBtn.addEventListener('click', () => {
+        localStorage.removeItem('token');
+        logoutBtn.textContent = 'login';
+        window.location.href = './login.html';
+    });
+}
+
 
 export function renderCardUi(arr) {
     let array = [...arr].splice(0, 6)
@@ -60,3 +77,9 @@ elSearch.addEventListener('keyup', e => {
 })
 
 
+let elHead = document.querySelector('.show__wrapper')
+elHead.addEventListener('click', e => {
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=flowers&orderBy=newest&key=${KEY}`)
+        .then(res => res.json())
+        .then(data => getArr(data.items))
+})
