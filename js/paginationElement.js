@@ -6,6 +6,8 @@ let elPage = document.querySelector('.page__number')
 
 
 export function pagination(arr) {
+    // elPageList.innerHTML = ''
+    elPage.innerHTML = ''
     let pageArr = []
     let sum = Math.ceil(arr.length / 6)
     for (let i = 1; i <= sum; i++) {
