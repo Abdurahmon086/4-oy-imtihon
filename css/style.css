@@ -519,11 +519,10 @@ header .show__select {
 header .show__select::after {
   content: url(../../images/order.svg);
   position: absolute;
-  background: #000;
   width: 24px;
   height: 24px;
-  top: 10px;
-  left: 0;
+  top: 5px;
+  left: 5px;
 }
 
 .books {
